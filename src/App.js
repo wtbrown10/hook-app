@@ -1,11 +1,17 @@
 import React from 'react';
-import SongList from './Components/SongList';
+import Navbar from './Components/Navbar';
+import BookContextProvider from './contexts/BookContext';
+import BookList from './Components/BookList';
+import NewBookForm from './Components/NewBookForm';
 
 function App() {
-  
   return (
     <div className="App">
-      <SongList />
+      <BookContextProvider>
+        <Navbar />
+        <BookList />
+        <NewBookForm />
+      </BookContextProvider>
     </div>
   );
 }
